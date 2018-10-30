@@ -1,44 +1,40 @@
-写一个Person类，要有id，name，age属性，靠id来判断是否是同一个人。要有一个introduce方法，
-introduce方法返回一个字符串形如：
+Create class Person with fields id, name, age and a method named introduce. Id is used to identify persons.
+Method introduce should return string like this:
 
 >My name is Tom. I am 21 years old.
 
-再写一个Student类继承Person类，除了id，name，age属性，还有要有klass属性。也有一个introduce方法，
-introduce方法返回一个字符串形如：
+Then create class Student to inherit class Person. There are fields id, name, age, klass and a method named introduce in class Student. Method introduce should return string like this:
 
 >My name is Tom. I am 21 years old. I am a Student. I am at Class 2.
 
-但是Student的klass属性不是一个数字，而是一个对象，写一个Klass类，有number属性还有一个leader属性。但是leader属性不在构造器里。
+But field klass is an object rather than a number. Create class Klass with fields number and leader. But leader doesn't get assigned in the constructor. Then pass a Klass instance into the constructor of Student. Please refer to test cases.
 
-Student构造的时候把Klass的一个实例传给Student，参见测试用例。
-Klass有一个assignLeader方法，接收一个Student实例。意为将一名学生设置为该Klass的班长。
-如果Klass的Leader是Tom，那么Tom调用introduce的方法就要返回：
+Klass has a assignLeader method which receive a Student instance to assign the leader of the Klass. If Tom if the leader of the Klass, then calling return of method introduce to Tom should look like this:
 
 >My name is Tom. I am 21 years old. I am a Student. I am Leader of Class 2.
 
-如果没有就继续返回旧的字符串。
+otherwise the method introduce should just bahave like before.
 
-Klass还有一个appendMember方法，接受一个Student实例。意味将一名学生加入该班级。
-如果学生没有加入该班级，那么在调用assignLeader方法的时候，不会assign成功，会打印一句话：
+Klass also has a appendMember method which receive a Student instance to add a  student to this Klass.
+If a student is not in the Klass, then assignLeader to the student will fail and return:
 
 >It is not one of us.
 
-相应的调用Student的introduce方法也只会返回旧的字符串。
+and if so, the method introduce of Student should just bahave like before.
 
-再写一个Teacher类继承Person类，除了id，name，age属性，也有classes属性。也有一个introduce方法，
-introduce方法返回一个字符串形如：
+Then create class Teacher to inherit class Person. There are fields id, name, age, classes and a method named introduce in class Teacher. Method introduce should return string like this:
 
 >My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.
 
-如果classes的长度为0，就会返回：
+if the length of classes is zero, then it should return string like this:
 
 >My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.
 
-Teacher还有一个isTeaching方法，传入一个学生，返回true/false。只要学生在classes中的任一个klass中，就是在教他。
-而学生是否在klass中这件事情，应该是Klass有一个方法isIn来判断。
+Teacher also has a isTeaching method which receive a Student instance to return it's ture or false that the teacher is teaching the student. Once the student is in any classes that teacher is teaching, the method should return true. 
+And there is a corresponding method named isIn in class Student to return is the student is in the klass.
 
-所有Person的子类的这段文字：
+This text from all subclasses of class Person
 
 >My name is Tom. I am 21 years old.
 
-都应该调用Person的introduce方法来获得。
+should be returned by calling method introduce from class Person.

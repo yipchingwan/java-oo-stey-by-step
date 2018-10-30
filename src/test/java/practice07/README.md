@@ -1,36 +1,34 @@
-写一个Person类，要有name，age属性，要有一个introduce方法，
-introduce方法返回一个字符串形如：
+Create class Person with fields name, age and a method named introduce.
+Method introduce should return string like this:
 
 >My name is Tom. I am 21 years old.
 
-再写一个Student类继承Person类，除了name，age属性，还有要有klass属性。也有一个introduce方法，
-introduce方法返回一个字符串形如：
+Then create class Student to inherit class Person. There are fields name, age, klass and a method named introduce in class Student. Method introduce should return string like this:
 
 >My name is Tom. I am 21 years old. I am a Student. I am at Class 2.
 
-但是Student的klass属性不是一个数字，而是一个对象，写一个Klass类，有number属性。Student构造的时候把Klass的一个实例传给Student，参见测试用例。
+But field klass is an object rather than a number. Create class Klass with a field named number. And pass a Klass instance into the constructor of Student. Please refer to test cases.
 
-再写一个Teacher类继承Person类，除了name，age属性，还有klass属性。也有一个introduce方法，
-introduce方法返回一个字符串形如：
+Then create class Teacher to inherit class Person. There are fields name, age, klass and a method named introduce in class Teacher. Method introduce should return string like this:
 
 >My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2.
 
-如果klass为空，就会返回：
+If klass is null, then it will like this:
 
 >My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.
 
-写一个introduceWith方法，传入一个student，比如Jerry，如果Jerry是Teacher教的班级则返回形如：
+Add method introduceWith with a parameter student. Say Jerry, if Jerry is a student of this teacher then the method should return this:
 
 >My name is Tom. I am 21 years old. I am a Teacher. I teach Jerry.
 
-否则返回：
+otherwise:
 
 >My name is Tom. I am 21 years old. I am a Teacher. I don't teach Jerry.
 
-所有Person的子类的这段文字：
+This text from all subclasses of class Person
 
 >My name is Tom. I am 21 years old.
 
-都应该调用Person的introduce方法来获得。
+should be returned by calling method introduce from class Person.
 
-注意：要尽量减少重复代码
+Attention: try your best to reduce duplicated code

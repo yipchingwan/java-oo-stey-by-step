@@ -1,15 +1,12 @@
-写一个Person类，要有name，age属性，要有一个introduce方法，
-introduce方法返回一个字符串形如：
+Create class Person with fields name, age and a method named introduce.
+Method introduce should return string like this:
 
 >My name is Tom. I am 21 years old.
 
-再写一个Student类继承Person类，除了name，age属性，还有要有klass属性。也有一个introduce方法，
-introduce方法返回一个字符串形如：
+Then create class Student to inherit class Person. There are fields name, age, klass and a method named introduce in class Student. Method introduce should return string like this:
 
 >I am a Student. I am at Class 2.
 
-
-再写一个Worker类继承Person类，只有name，age属性。也有一个introduce方法，
-introduce方法返回一个字符串形如：
+Then create class Worker to inherit class Person. There are fields name, age, a method named introduce in class Workder. Method introduce should return string like this:
 
 >I am a Worker. I have a job.

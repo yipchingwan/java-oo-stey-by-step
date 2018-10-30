@@ -1,24 +1,37 @@
-# Java面向对象编程
+# Java OO Stey By Step 
 
-## 练习描述
-- 根据测试目录下各包下README.md中的需求编写代码，使得测试代码可以运行通过。
+## Business Requirement
+- Due to the requirement for diff steps of practice which in README.md of test folder, Please write the corresponding implementation code in src folder to pass tests and fulfill the requirement.
 
-## 环境要求
+## Practice Challenges
+1. Java Syntax implementation for the different feature in OO
+2. Three main feature in  OOP.
+3. Read and run tests to understand the implementation validation and business logic.
+4. Use a design program with basic OO Thinking.
+5. How to Use Observer Pattern to decouple the two-way dependencies.
+
+## Environment
 - Java 8
 - Intellij-IDEA
+- Gradle (Optional)
 
-## 如何开始
-在命令行中使用以下命令在用户本地任意目录下clone此题目库
+## Practice Requirement
+Use below command to clone practice to your local machine
 ```
 git clone repo_of_this_template
 ```
-运行测试：
+Run tests command：
 ```
 ./gradlew test
+or
+gradle test (if you have Gradle installed in local machine)
 ```
 
-## 输出规范
-* 根据src/test/java/paractice_*/README.md完成对应的src/main/java/practice_*/的代码。要求测试通过，并符合题目要求。
-* 能够理解代码的执行过程中都发生了什么，如果不能够理解，使用调试器进行单步调试来辅助理解。
-* 每完成一个练习至少提交一次代码。
-* 反注释测试代码以执行。
+* Due to the requirement in src/test/java/paractice_*/README.md, Complete the corrsponding code in src/main/java/practice_*/。Test must be passed, requirement must be fulfilled.
+* Before coding you should uncomment the test methods in test class.
+* Understand what happens during the execution of the code. If you can't understand it, use the debugger to step through it to aid understanding.
+* git commit with meanful comments after each test method is passed。
+
+## Practice Output && Submit
+- You should implement the code to pass all tests in test folder after uncomment all test methods, and push your repo to github repo named **java-oo-stey-by-step**.
+- Commit your repostory link to complete this Question.

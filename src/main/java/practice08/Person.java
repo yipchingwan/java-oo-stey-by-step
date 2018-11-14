@@ -20,4 +20,13 @@ public class Person {
 		String tmp = "My name is " + this.getName() + ". I am "+ this.getAge() + " years old.";
 		return tmp;
 	}
+	public int getId(){
+		return this.id;
+	}
+	@Override
+	public int hashCode(){
+		int myCode = this.getId();
+		return myCode;
+	}
+
 }

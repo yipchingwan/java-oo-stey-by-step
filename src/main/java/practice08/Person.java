@@ -24,9 +24,24 @@ public class Person {
 		return this.id;
 	}
 	@Override
-	public int hashCode(){
-		int myCode = this.getId();
-		return myCode;
-	}
+    public String toString() {
+        return id+"";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Person person = (Person) o;
+
+        return this.getId() == person.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return this.id;
+    }
 
 }
